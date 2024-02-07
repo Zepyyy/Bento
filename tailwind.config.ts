@@ -7,6 +7,7 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+      extend : {
     colors: {
         bg: '#1D1B1B',
         Mirage: {
@@ -22,6 +23,7 @@ const config: Config = {
             900: '#2D384D',
             950: '#1A202C'
         },
+    },
     },
   },
   plugins: [],

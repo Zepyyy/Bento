@@ -9,7 +9,7 @@ export default function Home() {
 		<main className="bg-bg">
 			<Nav />
 			<div
-				className={"flex flex-col justify-center items-center text-Mirage-200"}
+				// className={"flex flex-col justify-center items-center text-Mirage-200"}
 			>
 				<Main />
 				<Skills />
