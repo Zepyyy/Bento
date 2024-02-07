@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import theme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -14,6 +13,14 @@ const config: Config = {
         },
         {
             pattern: /row-span-/,
+            variants: ['sm', 'md', 'lg', 'xl', "2xl"],
+        },
+        {
+            pattern: /col-start-/,
+            variants: ['sm', 'md', 'lg', 'xl', "2xl"],
+        },
+        {
+            pattern: /row-start-/,
             variants: ['sm', 'md', 'lg', 'xl', "2xl"],
         },
     ],

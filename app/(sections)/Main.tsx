@@ -65,9 +65,9 @@ export default function Main() {
                 <GridSquare col={2} row={2} backgroundColor={"bg-Mirage-300"} text={4} square={false}/>
                 <GridSquare col={6} row={2} colStart={1} rowStart={5} backgroundColor={"bg-Mirage-400"} text={5}/>
                 <GridSquare col={6} row={4} colStart={7} rowStart={3} backgroundColor={"bg-Mirage-500"} text={6}/>
-                <GridSquare col={2} row={2} rowStart={7} backgroundColor={"bg-Mirage-600"} text={7}/>
-                <GridSquare col={6} row={2} colStart={6} rowStart={7} backgroundColor={"bg-Mirage-800"} text={8}/>
-                <GridSquare col={4} row={2} colStart={8} rowStart={7} backgroundColor={"bg-Mirage-800"} text={9}/>
+                <GridSquare col={2} row={2} colStart={1} rowStart={7} backgroundColor={"bg-Mirage-600"} text={7}/>
+                <GridSquare col={6} row={2} colStart={3} rowStart={7} backgroundColor={"bg-Mirage-200"} text={8}/>
+                <GridSquare col={4} row={2} colStart={9} rowStart={7} backgroundColor={"bg-Mirage-800"} text={9}/>
             </div>
         </div>
     );
