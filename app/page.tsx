@@ -6,10 +6,10 @@ import Nav from "@/app/components/Nav";
 
 export default function Home() {
 	return (
-		<main className="bg-bg">
+		<main>
 			<Nav />
 			<div
-				// className={"flex flex-col justify-center items-center text-Mirage-200"}
+			// className={"flex flex-col justify-center items-center text-Mirage-200"}
 			>
 				<Main />
 				<Skills />
