@@ -7,10 +7,10 @@ import Nav from "@/app/components/Nav";
 export default function Home() {
 	return (
 		<main>
-			<Nav />
-			<div
-			// className={"flex flex-col justify-center items-center text-Mirage-200"}
-			>
+			<div className={"fixed top-1/2 -translate-y-1/2"}>
+				<Nav />
+			</div>
+			<div className={"sections"}>
 				<Main />
 				<Skills />
 				<Experiences />
