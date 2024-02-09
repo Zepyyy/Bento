@@ -61,7 +61,9 @@ function GridSquare({
 export default function Main() {
 	return (
 		<div
-			className={"h-screen flex flex-col justify-center items-end bg-bg mr-9"}
+			className={
+				"h-screen flex flex-col justify-center items-end bg-bg mr-9 main"
+			}
 			id={"home"}
 		>
 			<div className="container grid grid-cols-12 gap-5 h-3/5 w-2/3">
