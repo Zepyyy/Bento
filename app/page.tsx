@@ -17,29 +17,30 @@ export default function Home() {
 				const section = sectionRef.current;
 				const scroll = section.scrollTop;
 				const main = section.getElementsByClassName("main")[0];
+				const projects = section.getElementsByClassName("projects")[0];
 				const skills = section.getElementsByClassName("skills")[0];
 				const experiences = section.getElementsByClassName("experiences")[0];
-				const projects = section.getElementsByClassName("projects")[0];
+
 				if (scroll < main.clientHeight) {
 					setActiveLink("home");
 				} else {
-					if (scroll < main.clientHeight + skills.clientHeight) {
-						setActiveLink("skills");
+					if (scroll < main.clientHeight + projects.clientHeight) {
+						setActiveLink("projects");
 					} else {
 						if (
 							scroll <
-							main.clientHeight + skills.clientHeight + experiences.clientHeight
+							main.clientHeight + projects.clientHeight + skills.clientHeight
 						) {
-							setActiveLink("experiences");
+							setActiveLink("skills");
 						} else {
 							if (
 								scroll <
 								main.clientHeight +
-									skills.clientHeight +
+									projects.clientHeight +
 									experiences.clientHeight +
-									projects.clientHeight
+									skills.clientHeight
 							) {
-								setActiveLink("projects");
+								setActiveLink("experiences");
 							} else {
 								setActiveLink("home");
 							}
@@ -52,21 +53,21 @@ export default function Home() {
 		sectionRef.current?.addEventListener("scroll", handleScroll);
 
 		return () => {
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 			sectionRef.current?.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
 	return (
 		<main>
-			<div className={"fixed top-1/2 -translate-y-1/2"}>
+			<div className={"fixed top-1/2 -translate-y-1/2 w-1/12"}>
 				<Nav activeLink={activeLink} />
 			</div>
 			<div className={"sections"} ref={sectionRef}>
 				<Main />
+				<Projects />
 				<Skills />
 				<Experiences />
-				<Projects />
 			</div>
 		</main>
 	);
