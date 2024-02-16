@@ -14,7 +14,7 @@ export default function Nav({ activeLink }: navProps) {
 
 	return (
 		<nav>
-			<div className="flex flex-col">
+			<div className="md:flex md:flex-col hidden">
 				{links.map((link) => (
 					<div
 						key={link.name}

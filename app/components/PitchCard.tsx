@@ -1,4 +1,4 @@
-export default function PitchCards() {
+export default function PitchCard() {
 	const title = "Quentin Stubecki";
 
 	return (

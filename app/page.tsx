@@ -63,7 +63,12 @@ export default function Home() {
 			<div className={"fixed top-1/2 -translate-y-1/2 w-1/12"}>
 				<Nav activeLink={activeLink} />
 			</div>
-			<div className={"sections"} ref={sectionRef}>
+			<div
+				className={
+					"bg-bg block md:overflow-y-scroll md:snap-y md:snap-mandatory md:h-screen"
+				}
+				ref={sectionRef}
+			>
 				<Main />
 				<Projects />
 				<Skills />

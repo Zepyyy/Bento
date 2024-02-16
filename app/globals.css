@@ -12,20 +12,6 @@
   }
 }
 
-.sections {
-    background-color: var(--bg);
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    height:100vh;
-}
-
-#home,
-#skills,
-#experiences,
-#projects {
-    scroll-snap-align: start;
-    height: 100vh;
-}
 * {
     min-width: 0;
 }
