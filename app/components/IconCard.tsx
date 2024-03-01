@@ -15,9 +15,7 @@ function switchIcon(spec: string | undefined) {
 	}
 }
 
-export default function IconCard({
-	spec,
-}: { spec: string | undefined }) {
+export default function IconCard({ spec }: { spec: string | undefined }) {
 	return (
 		<div className={"flex flex-col justify-center items-center h-full"}>
 			{spec ? switchIcon(spec) : null}

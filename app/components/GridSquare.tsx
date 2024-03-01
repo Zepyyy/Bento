@@ -11,9 +11,9 @@ interface GridProps {
 	rowStart?: number;
 	backgroundColor: string;
 	spec?: string;
-    title?: string;
-    content?: Array<string>;
-    text?: string;
+	title?: string;
+	content?: Array<string>;
+	text?: string;
 }
 
 export default function GridSquare({
@@ -24,9 +24,9 @@ export default function GridSquare({
 	rowStart,
 	backgroundColor,
 	spec,
-    title,
-    content,
-    text
+	title,
+	content,
+	text,
 }: GridProps) {
 	function cardSwitch(type: string | undefined) {
 		switch (type) {
@@ -34,9 +34,9 @@ export default function GridSquare({
 				return <PitchCard />;
 			case "icon":
 				return <IconCard spec={spec} />;
-            case "grid":
+			case "grid":
 				return <TextCard title={title} text={text} />;
-            case "list":
+			case "list":
 				return <ListCard title={title} content={content} />;
 			default:
 				return <div> empty </div>;
@@ -52,6 +52,8 @@ export default function GridSquare({
 		"transition",
 		"duration-300",
 		"ease-in-out",
+		"my-10",
+		"md:m-0",
 	];
 
 	// Construct the grid classes based on props

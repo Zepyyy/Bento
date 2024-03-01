@@ -38,7 +38,7 @@ const gridItems = [
 		colStart: 1,
 		rowStart: 5,
 		backgroundColor: "bg-Mirage-400",
-        title: "123"
+		title: "123",
 	},
 	{
 		type: "list",
@@ -47,8 +47,8 @@ const gridItems = [
 		colStart: 7,
 		rowStart: 3,
 		backgroundColor: "bg-Mirage-500",
-        title: "Skills",
-        content: ["first", "second", "third"]
+		title: "Skills",
+		content: ["first", "second", "third"],
 	},
 	{
 		type: "icon",
@@ -66,7 +66,7 @@ const gridItems = [
 		colStart: 3,
 		rowStart: 7,
 		backgroundColor: "bg-Mirage-200",
-        title: "456"
+		title: "456",
 	},
 	{
 		type: "grid",
@@ -75,16 +75,16 @@ const gridItems = [
 		colStart: 9,
 		rowStart: 7,
 		backgroundColor: "bg-Mirage-800",
-        title: "789",
-        text: "text"
+		title: "789",
+		text: "text",
 	},
 ];
 
 export default function Main() {
 	return (
-		<div className="h-screen flex flex-col justify-center items-center mx-16 md:items-end bg-bg md:mr-9 md:snap-start main">
+		<div className="h-fit md:h-screen flex flex-col justify-center items-center mx-10 md:mx-16 md:items-end md:bg-bg md:mr-9 md:snap-start main">
 			<div className="container md:grid md:grid-cols-12 md:gap-4 md:h-3/4 md:w-2/3">
-				{gridItems.map((item,index) => (
+				{gridItems.map((item, index) => (
 					<GridSquare
 						key={`${index}-${item.type}`} // Construct a unique key for each item
 						col={item.col}
@@ -94,9 +94,9 @@ export default function Main() {
 						backgroundColor={item.backgroundColor}
 						type={item.type}
 						spec={item.spec}
-                        title={item.title}
-                        content={item.content}
-                        text={item.text}
+						title={item.title}
+						content={item.content}
+						text={item.text}
 					/>
 				))}
 			</div>
