@@ -1,6 +1,7 @@
 "use client";
 
 import GridSquare from "@/app/components/GridSquare";
+
 const gridItems = [
 	{
 		type: "pitch",
@@ -15,7 +16,8 @@ const gridItems = [
 		spec: "github",
 		col: 2,
 		row: 2,
-		backgroundColor: "bg-Mirage-100",
+        backgroundColor: "bg-Mirage-200",
+        link: "https://github.com/Zepyyy",
 	},
 	{
 		type: "icon",
@@ -23,13 +25,15 @@ const gridItems = [
 		col: 2,
 		row: 2,
 		backgroundColor: "bg-Mirage-200",
+        link: "https://www.linkedin.com/in/quentin-stubecki-211419227/",
 	},
 	{
 		type: "icon",
 		spec: "spotify",
 		col: 2,
 		row: 2,
-		backgroundColor: "bg-Mirage-300",
+        backgroundColor: "bg-Mirage-200",
+        link: "https://open.spotify.com/user/21ealn3abzhj75mxeoaeklfkq?si=4c6b75adb59a4f65",
 	},
 	{
 		type: "grid",
@@ -46,18 +50,17 @@ const gridItems = [
 		row: 4,
 		colStart: 7,
 		rowStart: 3,
-		backgroundColor: "bg-Mirage-500",
+        backgroundColor: "bg-Mirage-300",
 		title: "Skills",
 		content: ["first", "second", "third"],
 	},
 	{
-		type: "icon",
-		spec: "magic",
+        type: "magic",
 		col: 2,
 		row: 2,
 		colStart: 1,
 		rowStart: 7,
-		backgroundColor: "bg-Mirage-600",
+        backgroundColor: "bg-Mirage-200",
 	},
 	{
 		type: "grid",
@@ -74,7 +77,7 @@ const gridItems = [
 		row: 2,
 		colStart: 9,
 		rowStart: 7,
-		backgroundColor: "bg-Mirage-800",
+        backgroundColor: "bg-Mirage-950",
 		title: "789",
 		text: "text",
 	},
@@ -97,6 +100,7 @@ export default function Main() {
 						title={item.title}
 						content={item.content}
 						text={item.text}
+                        link={item.link}
 					/>
 				))}
 			</div>

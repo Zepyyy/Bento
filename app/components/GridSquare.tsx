@@ -2,6 +2,7 @@ import IconCard from "@/app/components/IconCard";
 import ListCard from "@/app/components/ListCard";
 import PitchCard from "@/app/components/PitchCard";
 import TextCard from "@/app/components/TextCard";
+import MagicCard from "@/app/components/MagicCard";
 
 interface GridProps {
 	type?: string;
@@ -14,6 +15,7 @@ interface GridProps {
 	title?: string;
 	content?: Array<string>;
 	text?: string;
+    link?: string;
 }
 
 export default function GridSquare({
@@ -27,17 +29,20 @@ export default function GridSquare({
 	title,
 	content,
 	text,
+                                       link,
 }: GridProps) {
 	function cardSwitch(type: string | undefined) {
 		switch (type) {
 			case "pitch":
 				return <PitchCard />;
 			case "icon":
-				return <IconCard spec={spec} />;
+                return <IconCard spec={spec} link={link}/>;
 			case "grid":
 				return <TextCard title={title} text={text} />;
 			case "list":
 				return <ListCard title={title} content={content} />;
+            case "magic":
+                return <MagicCard/>;
 			default:
 				return <div> empty </div>;
 		}
@@ -48,9 +53,11 @@ export default function GridSquare({
 		`${backgroundColor}`,
 		"p-5",
 		"text-Mirage-950",
-		"hover:opacity-80",
+        "hover:scale-[1.02]",
+        "hover:shadow-md",
+        "hover:bg-Mirage-300",
 		"transition",
-		"duration-300",
+        "duration-500",
 		"ease-in-out",
 		"my-10",
 		"md:m-0",

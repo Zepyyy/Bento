@@ -9,8 +9,7 @@ export default function TextCard({ title, text }: TextCardProps) {
 			{title ? <div className={"text-3xl font-bold"}>{title}</div> : ""}
 			{text ? (
 				<div className={"container"}>
-					{" "}
-					<div className={"text-2xl font-semibold"}> </div>{" "}
+                    <div className={"text-2xl font-semibold"}/>
 				</div>
 			) : (
 				""
