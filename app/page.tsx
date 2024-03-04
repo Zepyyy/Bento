@@ -4,7 +4,8 @@ import Main from "@/app/(sections)/Main";
 import Projects from "@/app/(sections)/Projects";
 import Skills from "@/app/(sections)/Skills";
 import Nav from "@/app/components/Nav";
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
+import {ColorThemeProvider} from "@/app/contexts/ColorThemeContext";
 
 export default function Home() {
 	const [activeLink, setActiveLink] = useState("home");
@@ -59,7 +60,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main>
+        <ColorThemeProvider>
 			<div className={"fixed top-1/2 -translate-y-1/2 w-1/12"}>
 				<Nav activeLink={activeLink} />
 			</div>
@@ -74,6 +75,6 @@ export default function Home() {
 				<Skills />
 				<Experiences />
 			</div>
-		</main>
+        </ColorThemeProvider>
 	);
 }

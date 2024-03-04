@@ -24,7 +24,9 @@ export default function IconCard({
                 href={link}
                 target="_blank"
                 rel="noreferrer"
-                className={"flex flex-col justify-center items-center h-full"}
+                className={
+                    "flex flex-col justify-center items-center h-full hover:animate-none"
+                }
             >
                 {spec ? switchIcon(spec) : null}
             </Link>

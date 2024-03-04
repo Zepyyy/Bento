@@ -3,12 +3,76 @@
 @tailwind utilities;
 
 :root {
-    --bg: #F5F4F4;
+
+}
+
+/*yes*/
+.Mirage {
+    --bg: #1D1B1B;
+    --Color-50: #F5F7FA;
+    --Color-100: #EAEDF4;
+    --Color-200: #D1D9E6;
+    --Color-300: #A8B9D1;
+    --Color-400: #7993B7;
+    --Color-500: #58769F;
+    --Color-600: #455E84;
+    --Color-700: #394C6B;
+    --Color-800: #32415A;
+    --Color-900: #2D384D;
+    --Color-950: #1A202C;
+}
+
+/*yes*/
+.Frost {
+    --bg: #F5FAFF; /* A chilly, light gray-blue as the background */
+    --Color-50: #2B384D; /* Nearly white, for the lightest accents */
+    --Color-100: #F2F6FA; /* Very light blue, for background contrasts */
+    --Color-200: #E1E8F0; /* Soft blue, for secondary elements */
+    --Color-300: #CDD5DF; /* Cool grey, for borders and separators */
+    --Color-400: #B4C1CD; /* Steel blue, for interactive elements */
+    --Color-500: #9BAAC3; /* Slate blue, for primary buttons and icons */
+    --Color-600: #8194AE; /* Deeper grey-blue, for emphasis */
+    --Color-700: #697A94; /* Dark slate, for headers and important text */
+    --Color-800: #55687E; /* Navy blue, for strong accents */
+    --Color-900: #3E5068; /* Almost black, for critical elements */
+    --Color-950: #2B384D; /* The darkest grey-blue, for text or outlines */
+}
+
+/*yes*/
+.Midnight {
+    --bg: #121212; /* Deep black, mimicking the dark night sky */
+    --Color-50: #F0F0F0; /* Slightly lighter black, for subtle texture */
+    --Color-100: #343434; /* Dark grey, for elevated surfaces */
+    --Color-200: #454545; /* Medium dark grey, for secondary elements */
+    --Color-300: #565656; /* Grey, for tertiary components */
+    --Color-400: #787878; /* Lighter grey, for interactive elements */
+    --Color-500: #9A9A9A; /* Silver, for primary buttons and icons */
+    --Color-600: #BCBCBC; /* Pale silver, for emphasis */
+    --Color-700: #DEDEDE; /* Almost white, for headers and important text */
+    --Color-800: #EFEFEF; /* Soft white, for strong accents */
+    --Color-900: #FFFFFF; /* Pure white, for critical elements and highlights */
+    --Color-950: #F0F0F0; /* Very light grey, for text or outlines against dark backgrounds */
+}
+
+.Aurora {
+    --bg: #E0FFF3; /*Very light teal, reminiscent of aurora lights */
+    --Color-50: #00251A; /*Lightest cyan for the lightest accents */
+    --Color-100: #C7F8E9; /*Aquamarine for background contrasts */
+    --Color-200: #A3E4D7; /*Medium turquoise for secondary elements */
+    --Color-300: #6DD9C1; /*Light sea green for borders and separators */
+    --Color-400: #37CCAA; /*Medium aquamarine for interactive elements */
+    --Color-500: #00BFA5; /*Teal for primary buttons and icons */
+    --Color-600: #00897B; /*Dark cyan for emphasis */
+    --Color-700: #00695C; /*Deep teal for headers and important text */
+    --Color-800: #004D40; /*Dark green for strong accents */
+    --Color-900: #00332C; /*Almost black green for critical elements */
+    --Color-950: #00251A; /*Dark jungle green for text or outlines */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #1D1B1B;
+
   }
 }
 
