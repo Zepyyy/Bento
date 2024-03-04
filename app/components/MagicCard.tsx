@@ -19,7 +19,6 @@ export default function MagicCard() {
                 onClick={handleMagicClick}
             >
                 <FaMagic size={56}/>
-                {colorTheme}
             </button>
 		</div>
 	);
