@@ -7,7 +7,7 @@ export const ColorThemeContext = createContext<
 // @ts-ignore
 export const ColorThemeProvider = ({ children }) => {
 	const [colorTheme, setColorTheme] = useState("Mirage");
-    const [Theme, setTheme] = useState("dark");
+    const [Theme, setTheme] = useState("");
 
     useEffect(() => {
         const mq = window.matchMedia("(prefers-color-scheme: dark)");
