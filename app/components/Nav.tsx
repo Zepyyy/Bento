@@ -24,7 +24,7 @@ export default function Nav({ activeLink }: navProps) {
 						<Link
 							href={link.href}
 							className={
-                                "relative z-10 px-4 py-2 ml-8 text-Color-50 transition-colors duration-300"
+                                "relative z-10 px-4 py-2 ml-8 text-nav transition-colors duration-300"
 							}
 						>
 							{link.name}

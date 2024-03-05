@@ -6,7 +6,7 @@ export default function MagicCard() {
     const [colorTheme, setColorTheme] = useContext(ColorThemeContext);
 
     function handleMagicClick() {
-        const colors = ["Mirage", "Aurora", "Frost", "Midnight"];
+        const colors = ["Mirage"];
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         setColorTheme(randomColor);
     }

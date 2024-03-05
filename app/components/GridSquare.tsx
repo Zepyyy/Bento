@@ -16,6 +16,7 @@ interface GridProps {
 	content?: Array<string>;
 	text?: string;
     link?: string;
+    invertedTextColor?: boolean;
 }
 
 export default function GridSquare({
@@ -29,6 +30,7 @@ export default function GridSquare({
 	title,
 	content,
 	text,
+                                       invertedTextColor,
                                        link,
 }: GridProps) {
 	function cardSwitch(type: string | undefined) {
@@ -38,9 +40,21 @@ export default function GridSquare({
 			case "icon":
                 return <IconCard spec={spec} link={link}/>;
 			case "grid":
-				return <TextCard title={title} text={text} />;
+                return (
+                    <TextCard
+                        title={title}
+                        text={text}
+                        invertedTextColor={invertedTextColor}
+                    />
+                );
 			case "list":
-				return <ListCard title={title} content={content} />;
+                return (
+                    <ListCard
+                        title={title}
+                        content={content}
+                        invertedTextColor={invertedTextColor}
+                    />
+                );
             case "magic":
                 return <MagicCard/>;
 			default:

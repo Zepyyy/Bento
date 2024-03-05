@@ -28,6 +28,10 @@ const config: Config = {
     extend : {
         colors: {
             bg: "var(--bg)",
+            text: "var(--Text)",
+            inverted: "var(--Inverted-Text)",
+            highlight: "var(--Highlight)",
+            nav: "var(--Nav)",
             "Color-50": "var(--Color-50)",
             "Color-100": "var(--Color-100)",
             "Color-200": "var(--Color-200)",

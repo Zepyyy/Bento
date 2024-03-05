@@ -42,6 +42,7 @@ const gridItems = [
 		colStart: 1,
 		rowStart: 5,
         backgroundColor: "bg-Color-400",
+        invertedTextColor: true,
 		title: "123",
 	},
 	{
@@ -51,6 +52,7 @@ const gridItems = [
 		colStart: 7,
 		rowStart: 3,
         backgroundColor: "bg-Color-300",
+        invertedTextColor: false,
 		title: "Skills",
 		content: ["first", "second", "third"],
 	},
@@ -78,6 +80,7 @@ const gridItems = [
 		colStart: 9,
 		rowStart: 7,
         backgroundColor: "bg-Color-950",
+        invertedTextColor: true,
 		title: "789",
 		text: "text",
 	},
@@ -101,6 +104,7 @@ export default function Main() {
 						content={item.content}
 						text={item.text}
                         link={item.link}
+                        invertedTextColor={item.invertedTextColor}
 					/>
 				))}
 			</div>
