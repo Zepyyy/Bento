@@ -15,8 +15,8 @@ interface GridProps {
 	title?: string;
 	content?: Array<string>;
 	text?: string;
-    link?: string;
-    invertedTextColor?: boolean;
+	link?: string;
+	invertedTextColor?: boolean;
 }
 
 export default function GridSquare({
@@ -30,33 +30,33 @@ export default function GridSquare({
 	title,
 	content,
 	text,
-                                       invertedTextColor,
-                                       link,
+	invertedTextColor,
+	link,
 }: GridProps) {
 	function cardSwitch(type: string | undefined) {
 		switch (type) {
 			case "pitch":
 				return <PitchCard />;
 			case "icon":
-                return <IconCard spec={spec} link={link}/>;
-			case "grid":
-                return (
-                    <TextCard
-                        title={title}
-                        text={text}
-                        invertedTextColor={invertedTextColor}
-                    />
-                );
+				return <IconCard spec={spec} link={link} />;
+			case "text":
+				return (
+					<TextCard
+						title={title}
+						text={text}
+						invertedTextColor={invertedTextColor}
+					/>
+				);
 			case "list":
-                return (
-                    <ListCard
-                        title={title}
-                        content={content}
-                        invertedTextColor={invertedTextColor}
-                    />
-                );
-            case "magic":
-                return <MagicCard/>;
+				return (
+					<ListCard
+						title={title}
+						content={content}
+						invertedTextColor={invertedTextColor}
+					/>
+				);
+			case "magic":
+				return <MagicCard />;
 			default:
 				return <div> empty </div>;
 		}
@@ -65,13 +65,13 @@ export default function GridSquare({
 	const baseClasses = [
 		"rounded-2xl",
 		`${backgroundColor}`,
-		"p-5",
-        "text-Color-950",
-        "hover:scale-[1.02]",
-        "hover:shadow-md",
-        "hover:bg-Color-300",
+		type === "icon" || type === "magic" ? "p-0" : "p-5",
+		"hover:shadow-md",
+		"text-Color-950",
+		"hover:scale-[1.02]",
+		"hover:bg-Color-300",
 		"transition",
-        "duration-500",
+		"duration-500",
 		"ease-in-out",
 		"my-10",
 		"md:m-0",

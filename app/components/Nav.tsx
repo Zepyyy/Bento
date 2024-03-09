@@ -12,6 +12,8 @@ export default function Nav({ activeLink }: navProps) {
 		{ href: "#experiences", name: "Experiences" },
 	];
 
+    // TODO: use dark: class from tailwind
+
 	return (
 		<nav>
 			<div className="md:flex md:flex-col hidden">
@@ -24,7 +26,7 @@ export default function Nav({ activeLink }: navProps) {
 						<Link
 							href={link.href}
 							className={
-                                "relative z-10 px-4 py-2 ml-8 text-nav transition-colors duration-300"
+								"relative z-10 px-4 py-2 ml-8 text-nav transition-colors duration-300"
 							}
 						>
 							{link.name}
@@ -33,7 +35,7 @@ export default function Nav({ activeLink }: navProps) {
 						<div
 							className={`absolute left-0 top-1/2 -translate-y-1/2 h-1 ${
 								activeLink === link.name.toLowerCase() ? "w-6" : "w-3"
-                            } bg-Color-300 transition-all duration-300`}
+							} bg-Color-300 transition-all duration-300`}
 						/>
 					</div>
 				))}
