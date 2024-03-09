@@ -12,7 +12,7 @@ export default function Nav({ activeLink }: navProps) {
 		{ href: "#experiences", name: "Experiences" },
 	];
 
-    // TODO: use dark: class from tailwind
+	// TODO: use dark: class from tailwind
 
 	return (
 		<nav>

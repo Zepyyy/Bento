@@ -55,7 +55,13 @@ const gridItems = [
 		backgroundColor: "bg-Color-300",
 		invertedTextColor: false,
 		title: "Skills",
-		content: ["Music", "Technology", "Web development", "Coffee", "other stuff..."],
+		content: [
+			"Music",
+			"Technology",
+			"Web development",
+			"Coffee",
+			"other stuff...",
+		],
 	},
 	{
 		type: "magic",

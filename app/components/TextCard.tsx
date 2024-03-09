@@ -23,13 +23,13 @@ export default function TextCard({
 				""
 			)}
 			{text ? (
-					<div
-						className={`text-2xl font-semibold ${
-							invertedTextColor ? "text-inverted" : "text-text"
-						}`}
-					>
-						{" "}
-						{text}{" "}
+				<div
+					className={`text-2xl font-semibold ${
+						invertedTextColor ? "text-inverted" : "text-text"
+					}`}
+				>
+					{" "}
+					{text}{" "}
 				</div>
 			) : (
 				""

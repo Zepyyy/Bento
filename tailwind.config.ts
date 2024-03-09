@@ -26,6 +26,10 @@ const config: Config = {
     ],
   theme: {
     extend : {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-roboto-mono)'],
+      },
         colors: {
             bg: "var(--bg)",
             text: "var(--Text)",
