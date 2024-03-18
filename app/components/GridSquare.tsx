@@ -3,6 +3,7 @@ import ListCard from "@/app/components/ListCard";
 import PitchCard from "@/app/components/PitchCard";
 import TextCard from "@/app/components/TextCard";
 import MagicCard from "@/app/components/MagicCard";
+import LinkCard from "@/app/components/LinkCard";
 
 interface GridProps {
 	type?: string;
@@ -45,6 +46,8 @@ export default function GridSquare({
 				return <ListCard title={title} content={content} />;
 			case "magic":
 				return <MagicCard />;
+			case "link":
+				return <LinkCard />;
 			default:
 				return <div> empty </div>;
 		}
