@@ -4,11 +4,12 @@ import { FaMagic } from "react-icons/fa";
 
 export default function MagicCard() {
 	const [colorTheme, setColorTheme] = useContext(ColorThemeContext);
+	const colors = ["Mirage", "WildBlueYonder"];
 
 	function handleMagicClick() {
-		const colors = ["Mirage"];
-		const randomColor = colors[Math.floor(Math.random() * colors.length)];
-		setColorTheme(randomColor);
+		const newColorTheme = colors[Math.floor(Math.random() * colors.length)];
+		setColorTheme(newColorTheme);
+		document.documentElement.setAttribute("data-theme", newColorTheme);
 	}
 
 	return (

@@ -9,7 +9,8 @@ const gridItems = [
 		row: 4,
 		colStart: 1,
 		rowStart: 1,
-		backgroundColor: "bg-gradient-to-t from-Color-100 to-Color-300",
+		backgroundColor: "dark:bg-Color-200 bg-Color-950",
+		textColor: "text-Color-50 dark:text-Color-950",
 	},
 	{
 		type: "icon",
@@ -42,7 +43,6 @@ const gridItems = [
 		colStart: 1,
 		rowStart: 5,
 		backgroundColor: "bg-Color-400",
-		invertedTextColor: true,
 		title: "123",
 		text: "text",
 	},
@@ -53,7 +53,6 @@ const gridItems = [
 		colStart: 7,
 		rowStart: 3,
 		backgroundColor: "bg-Color-300",
-		invertedTextColor: false,
 		title: "Skills",
 		content: [
 			"Music",
@@ -88,7 +87,6 @@ const gridItems = [
 		colStart: 9,
 		rowStart: 7,
 		backgroundColor: "bg-Color-950",
-		invertedTextColor: true,
 		title: "789",
 		text: "text",
 	},

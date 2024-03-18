@@ -3,39 +3,67 @@
 @tailwind utilities;
 
 :root {
-    --bg: #F5F7FA;
-
-    .Mirage {
-        --Nav: #1A202C;
-        --Highlight: #58769F;
-    }
+    --bg: #f5f7fa;
+    --Text: #1a202c;
+}
+[data-theme="Mirage"] {
+    --Color-50: #f5f7fa;
+    --Color-100: #eaedf4;
+    --Color-200: #d1d9e6;
+    --Color-300: #a8b9d1;
+    --Color-400: #7993b7;
+    --Color-500: #58769f;
+    --Color-600: #455e84;
+    --Color-700: #394c6b;
+    --Color-800: #32415a;
+    --Color-900: #2d384d;
+    --Color-950: #1a202c;
+}
+[data-theme="WildBlueYonder"] {
+    --Color-50: #f4f5f9;
+    --Color-100: #eaeef5;
+    --Color-200: #d9deec;
+    --Color-300: #c1c9e0;
+    --Color-400: #a8add1;
+    --Color-500: #9195c3;
+    --Color-600: #8585b8;
+    --Color-700: #68679b;
+    --Color-800: #56557e;
+    --Color-900: #494a66;
+    --Color-950: #2b2b3b;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #1D1B1B;
-
-        .Mirage {
-            --Nav: #F5F7FA;
-            --Highlight: #58769F;
-        }
+        --bg: #1d1b1b;
+        --Text: #f5f4f4;
     }
-}
-
-.Mirage {
-    --Text: #1A202C;
-    --Inverted-Text: #F5F7FA;
-    --Color-50: #F5F7FA;
-    --Color-100: #EAEDF4;
-    --Color-200: #D1D9E6;
-    --Color-300: #A8B9D1;
-    --Color-400: #7993B7;
-    --Color-500: #58769F;
-    --Color-600: #455E84;
-    --Color-700: #394C6B;
-    --Color-800: #32415A;
-    --Color-900: #2D384D;
-    --Color-950: #1A202C;
+    [data-theme="Mirage"] {
+        --Color-50: #f5f7fa;
+        --Color-100: #eaedf4;
+        --Color-200: #d1d9e6;
+        --Color-300: #a8b9d1;
+        --Color-400: #7993b7;
+        --Color-500: #58769f;
+        --Color-600: #455e84;
+        --Color-700: #394c6b;
+        --Color-800: #32415a;
+        --Color-900: #2d384d;
+        --Color-950: #1a202c;
+    }
+    [data-theme="WildBlueYonder"] {
+        --Color-50: #f4f5f9;
+        --Color-100: #eaeef5;
+        --Color-200: #d9deec;
+        --Color-300: #c1c9e0;
+        --Color-400: #a8add1;
+        --Color-500: #9195c3;
+        --Color-600: #8585b8;
+        --Color-700: #68679b;
+        --Color-800: #56557e;
+        --Color-900: #494a66;
+        --Color-950: #2b2b3b;
+    }
 }
 
 * {

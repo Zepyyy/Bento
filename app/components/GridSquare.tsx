@@ -11,6 +11,7 @@ interface GridProps {
 	colStart?: number;
 	rowStart?: number;
 	backgroundColor: string;
+	textColor?: string;
 	spec?: string;
 	title?: string;
 	content?: Array<string>;
@@ -26,11 +27,11 @@ export default function GridSquare({
 	colStart,
 	rowStart,
 	backgroundColor,
+	textColor,
 	spec,
 	title,
 	content,
 	text,
-	invertedTextColor,
 	link,
 }: GridProps) {
 	function cardSwitch(type: string | undefined) {
@@ -40,21 +41,9 @@ export default function GridSquare({
 			case "icon":
 				return <IconCard spec={spec} link={link} />;
 			case "text":
-				return (
-					<TextCard
-						title={title}
-						text={text}
-						invertedTextColor={invertedTextColor}
-					/>
-				);
+				return <TextCard title={title} text={text} />;
 			case "list":
-				return (
-					<ListCard
-						title={title}
-						content={content}
-						invertedTextColor={invertedTextColor}
-					/>
-				);
+				return <ListCard title={title} content={content} />;
 			case "magic":
 				return <MagicCard />;
 			default:
@@ -65,11 +54,11 @@ export default function GridSquare({
 	const baseClasses = [
 		"rounded-2xl",
 		`${backgroundColor}`,
+		`${textColor}`,
 		type === "icon" || type === "magic" ? "p-0" : "p-5",
 		"hover:shadow-md",
-		"text-Color-950",
 		"hover:scale-[1.02]",
-		"hover:bg-Color-300",
+		"hover:bg-Color-300 dark:hover:bg-Color-800",
 		"transition",
 		"duration-500",
 		"ease-in-out",

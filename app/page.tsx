@@ -24,29 +24,23 @@ export default function Home() {
 
 				if (scroll < main.clientHeight) {
 					setActiveLink("home");
+				} else if (scroll < main.clientHeight + projects.clientHeight) {
+					setActiveLink("projects");
+				} else if (
+					scroll <
+					main.clientHeight + projects.clientHeight + skills.clientHeight
+				) {
+					setActiveLink("skills");
+				} else if (
+					scroll <
+					main.clientHeight +
+						projects.clientHeight +
+						experiences.clientHeight +
+						skills.clientHeight
+				) {
+					setActiveLink("experiences");
 				} else {
-					if (scroll < main.clientHeight + projects.clientHeight) {
-						setActiveLink("projects");
-					} else {
-						if (
-							scroll <
-							main.clientHeight + projects.clientHeight + skills.clientHeight
-						) {
-							setActiveLink("skills");
-						} else {
-							if (
-								scroll <
-								main.clientHeight +
-									projects.clientHeight +
-									experiences.clientHeight +
-									skills.clientHeight
-							) {
-								setActiveLink("experiences");
-							} else {
-								setActiveLink("home");
-							}
-						}
-					}
+					setActiveLink("home");
 				}
 			}
 		};
