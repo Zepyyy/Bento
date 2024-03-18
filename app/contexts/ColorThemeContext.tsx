@@ -13,7 +13,6 @@ export const ColorThemeContext = createContext<
 // @ts-ignore
 export const ColorThemeProvider = ({ children }) => {
 	const [colorTheme, setColorTheme] = useState("Mirage");
-	const [Theme, setTheme] = useState("");
 
 	useEffect(() => {
 		// Apply the theme to the document on load
@@ -40,7 +39,6 @@ export const ColorThemeProvider = ({ children }) => {
 				{children}
 				<div className="flex flex-col bg-Color-200 text-Color-800 absolute top-0 left-0 z-50 p-2 rounded-br-md">
 					<div>{colorTheme}</div>
-					<div>{Theme}</div>
 				</div>
 			</main>
 		</ColorThemeContext.Provider>
