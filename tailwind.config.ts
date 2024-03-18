@@ -33,7 +33,6 @@ const config: Config = {
             colors: {
                 bg: "var(--bg)",
                 text: "var(--Text)",
-                highlight: "var(--Highlight)",
                 "Color-50": "var(--Color-50)",
                 "Color-100": "var(--Color-100)",
                 "Color-200": "var(--Color-200)",

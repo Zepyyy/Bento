@@ -5,7 +5,7 @@ interface ListSquareProps {
 
 export default function ListCard({ title, content }: ListSquareProps) {
 	return (
-		<div className={"flex flex-col text-3xl font-bold text-text h-full"}>
+		<div className={"flex flex-col text-3xl font-bold h-full"}>
 			{title}
 			<ul
 				className={"flex flex-col justify-evenly text-2xl font-semibold h-full"}
@@ -13,7 +13,7 @@ export default function ListCard({ title, content }: ListSquareProps) {
 				{content
 					? content.map((item, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-							<li key={index} className={"text-xl text-text"}>
+							<li key={index} className={"text-xl"}>
 								{item}
 							</li>
 					  ))

@@ -17,7 +17,6 @@ interface GridProps {
 	content?: Array<string>;
 	text?: string;
 	link?: string;
-	invertedTextColor?: boolean;
 }
 
 export default function GridSquare({
@@ -59,6 +58,7 @@ export default function GridSquare({
 		"hover:shadow-md",
 		"hover:scale-[1.02]",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",
+		"hover:text-Color-900 dark:hover:text-Color-100",
 		"transition",
 		"duration-500",
 		"ease-in-out",
