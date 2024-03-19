@@ -1,6 +1,7 @@
 "use client";
 
 import GridSquare from "@/app/components/GridSquare";
+import UploadResume from "../components/UploadResume";
 
 const gridItems = [
 	{
@@ -104,6 +105,7 @@ export default function Main() {
 					/>
 				))}
 			</div>
+			<UploadResume />
 		</div>
 	);
 }
