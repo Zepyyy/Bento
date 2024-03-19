@@ -57,7 +57,7 @@ export default function GridSquare({
 		"rounded-2xl",
 		`${backgroundColor}`,
 		`${textColor}`,
-		type === "icon" || type === "magic" ? "p-0" : "p-5",
+		type === "icon" || type === "magic" || type === "link" ? "p-0" : "p-5",
 		"hover:shadow-md",
 		"hover:scale-[1.02]",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",
