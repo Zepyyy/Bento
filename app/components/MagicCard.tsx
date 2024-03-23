@@ -15,11 +15,11 @@ export default function MagicCard() {
 	return (
 		<div className={"h-full hover:transform-none"}>
 			<button
-				className={`flex flex-col items-center justify-center h-full w-full text-2xl font-semibold ${colorTheme}`}
+				className={`flex flex-col items-center justify-center h-full w-full text-2xl font-semibold ${colorTheme} p-5`}
 				type="button"
 				onClick={handleMagicClick}
 			>
-				<FaMagic size={56} />
+				<FaMagic className="lg:text-[56px] text-[36px]" />
 			</button>
 		</div>
 	);

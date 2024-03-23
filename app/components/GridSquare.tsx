@@ -7,10 +7,10 @@ import LinkCard from "@/app/components/LinkCard";
 
 interface GridProps {
 	type?: string;
-	col: number;
-	row: number;
-	colStart?: number;
-	rowStart?: number;
+	colSpan: number | Array<number>;
+	rowSpan: number | Array<number>;
+	colStart?: number | Array<number>;
+	rowStart?: number | Array<number>;
 	backgroundColor: string;
 	textColor?: string;
 	spec?: string;
@@ -22,8 +22,8 @@ interface GridProps {
 
 export default function GridSquare({
 	type,
-	col,
-	row,
+	colSpan,
+	rowSpan,
 	colStart,
 	rowStart,
 	backgroundColor,
@@ -53,11 +53,19 @@ export default function GridSquare({
 		}
 	}
 	// Define base classes as an array
+
 	const baseClasses = [
-		"rounded-2xl",
+		"lg:rounded-2xl",
+		"rounded-xl",
 		`${backgroundColor}`,
 		`${textColor}`,
-		type === "icon" || type === "magic" || type === "link" ? "p-0" : "p-5",
+		type === "icon"
+			? "p-0"
+			: type === "magic"
+			  ? "p-0"
+			  : type === "link"
+				  ? "p-0"
+				  : "p-5",
 		"hover:shadow-md",
 		"hover:scale-[1.02]",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",
@@ -65,14 +73,26 @@ export default function GridSquare({
 		"transition",
 		"duration-500",
 		"ease-in-out",
-		"my-10",
 		"lg:m-0",
 	];
 
-	// Construct the grid classes based on props
-	const gridClasses = `lg:col-span-${col} lg:row-span-${row} col-span-1 ${
-		colStart ? ` lg:col-start-${colStart} col-start-1 ` : ""
-	}${rowStart ? ` lg:row-start-${rowStart} ` : ""}`;
+	const colClasses = Array.isArray(colSpan)
+		? `lg:col-span-${colSpan[0]} col-span-${colSpan[1]}`
+		: `lg:col-span-${colSpan} col-span-3`;
+
+	const rowClasses = Array.isArray(rowSpan)
+		? `lg:row-span-${rowSpan[0]} row-span-${rowSpan[1]}`
+		: `lg:row-span-${rowSpan} row-span-1`;
+
+	const rowStartClasses = Array.isArray(rowStart)
+		? `lg:row-start-${rowStart[0]} row-start-${rowStart[1]}`
+		: `lg:row-start-${rowStart}`;
+
+	const colStartClasses = Array.isArray(colStart)
+		? `lg:col-start-${colStart[0]} col-start-${colStart[1]}`
+		: `lg:col-start-${colStart}`;
+
+	const gridClasses = `${colClasses} ${rowClasses} ${colStartClasses} ${rowStartClasses}`;
 
 	// Join all classes together
 	const className = [...baseClasses, gridClasses].join(" ");

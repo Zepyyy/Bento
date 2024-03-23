@@ -4,11 +4,11 @@ import Link from "next/link";
 function switchIcon(spec: string | undefined) {
 	switch (spec) {
 		case "github":
-			return <FaGithub size={56} />;
+			return <FaGithub className="lg:text-[56px] text-[36px]" />;
 		case "linkedin":
-			return <FaLinkedin size={56} />;
+			return <FaLinkedin className="lg:text-[56px] text-[36px]" />;
 		case "spotify":
-			return <FaSpotify size={56} />;
+			return <FaSpotify className="lg:text-[56px] text-[36px]" />;
 		default:
 			return <div> empty </div>;
 	}
