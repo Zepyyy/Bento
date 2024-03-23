@@ -66,13 +66,13 @@ export default function GridSquare({
 		"duration-500",
 		"ease-in-out",
 		"my-10",
-		"md:m-0",
+		"lg:m-0",
 	];
 
 	// Construct the grid classes based on props
-	const gridClasses = `md:col-span-${col} row-span-${row} col-span-1 ${
-		colStart ? ` md:col-start-${colStart} col-start-1 ` : ""
-	}${rowStart ? ` row-start-${rowStart} ` : ""}`;
+	const gridClasses = `lg:col-span-${col} lg:row-span-${row} col-span-1 ${
+		colStart ? ` lg:col-start-${colStart} col-start-1 ` : ""
+	}${rowStart ? ` lg:row-start-${rowStart} ` : ""}`;
 
 	// Join all classes together
 	const className = [...baseClasses, gridClasses].join(" ");

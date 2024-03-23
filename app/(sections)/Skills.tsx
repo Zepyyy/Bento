@@ -2,8 +2,9 @@ export default function Skills() {
 	return (
 		<div
 			className={
-				"flex h-screen md:flex-col justify-center items-end bg-bg mr-9 snap-start skills"
+				"flex h-screen lg:flex-col justify-center items-end bg-bg mr-9 snap-start skills"
 			}
+			id="skills"
 		>
 			<div
 				className={
