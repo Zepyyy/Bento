@@ -35,10 +35,10 @@ export default function LinkCard() {
 		>
 			<button
 				type="button"
-				className={"flex h-full w-full justify-center items-center"}
+				className={"flex h-full w-full justify-center items-center p-5"}
 				onClick={handleClick}
 			>
-				<FaLink size={56} className="mr-4" />
+				<FaLink className="lg:text-[56px] text-[36px] mr-4" />
 				<div className={"text-3xl font-bold"}>Resume</div>
 			</button>
 		</div>
