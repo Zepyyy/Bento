@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --bg: #f5f7fa;
+    --bg: #f5f4f4;
     --Text: #1a202c;
 }
 [data-theme="Mirage"] {
