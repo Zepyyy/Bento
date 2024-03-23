@@ -6,6 +6,7 @@ import Skills from "@/app/(sections)/Skills";
 import Nav from "@/app/components/Nav";
 import { useEffect, useRef, useState } from "react";
 import { ColorThemeProvider } from "@/app/contexts/ColorThemeContext";
+import FloatingArrow from "./components/FloatingArrow";
 
 export default function Home() {
 	const [activeLink, setActiveLink] = useState("home");
@@ -16,7 +17,7 @@ export default function Home() {
 			if (sectionRef.current) {
 				// color the nav link based on the section in view
 				const section = sectionRef.current;
-				const scroll = section.scrollTop;
+				const scroll = sectionRef.current.scrollTop;
 				const main = section.getElementsByClassName("main")[0];
 				const projects = section.getElementsByClassName("projects")[0];
 				const skills = section.getElementsByClassName("skills")[0];
@@ -40,7 +41,7 @@ export default function Home() {
 				) {
 					setActiveLink("experiences");
 				} else {
-					setActiveLink("home");
+					setActiveLink(""); // Add this line to handle the else case
 				}
 			}
 		};
@@ -69,6 +70,7 @@ export default function Home() {
 				<Skills />
 				<Experiences />
 			</div>
+			<FloatingArrow section={activeLink} />
 		</ColorThemeProvider>
 	);
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import GridSquare from "@/app/components/GridSquare";
-import FloatingArrow from "../components/FloatingArrow";
 
 const gridItems = [
 	{
@@ -96,7 +95,10 @@ const gridItems = [
 
 export default function Main() {
 	return (
-		<div className="h-fit lg:h-screen flex flex-col justify-center items-center mx-10 lg:mx-16 lg:items-end lg:bg-bg lg:mr-9 lg:snap-start main">
+		<div
+			className="h-fit lg:h-screen flex flex-col justify-center items-center mx-10 lg:mx-16 lg:items-end lg:bg-bg lg:mr-9 lg:snap-start main"
+			id="home"
+		>
 			<div className="container lg:grid lg:grid-cols-12 lg:gap-4 lg:h-3/4 lg:w-2/3 grid grid-cols-1 gap-6 w-2/3">
 				{gridItems.map((item, index) => (
 					<GridSquare
@@ -105,7 +107,6 @@ export default function Main() {
 					/>
 				))}
 			</div>
-			<FloatingArrow />
 		</div>
 	);
 }
