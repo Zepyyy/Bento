@@ -10,7 +10,7 @@ const gridItems = [
 		colStart: [1, 1],
 		rowStart: [1, 1],
 		backgroundColor: "dark:bg-Color-100 bg-Color-950",
-		textColor: "dark:text-Color-950 text-Color-200",
+		textColor: "dark:text-Color-950 text-Color-100",
 	},
 	{
 		type: "icon",
@@ -73,7 +73,8 @@ const gridItems = [
 		rowSpan: [2, 2],
 		colStart: 1,
 		rowStart: [7, 5],
-		backgroundColor: "bg-Color-200",
+		backgroundColor: "bg-Color-200 dark:bg-Color-800",
+		textColor: "text-Color-950 dark:text-Color-100",
 	},
 	{
 		type: "text",
