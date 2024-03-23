@@ -60,7 +60,7 @@ export default function Home() {
 			</div>
 			<div
 				className={
-					"bg-bg block md:overflow-y-scroll md:snap-y md:snap-mandatory md:h-screen"
+					"bg-bg block lg:overflow-y-scroll lg:snap-y lg:snap-mandatory lg:h-screen"
 				}
 				ref={sectionRef}
 			>

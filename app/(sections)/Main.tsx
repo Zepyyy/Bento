@@ -1,6 +1,7 @@
 "use client";
 
 import GridSquare from "@/app/components/GridSquare";
+import FloatingArrow from "../components/FloatingArrow";
 
 const gridItems = [
 	{
@@ -95,8 +96,8 @@ const gridItems = [
 
 export default function Main() {
 	return (
-		<div className="h-fit md:h-screen flex flex-col justify-center items-center mx-10 md:mx-16 md:items-end md:bg-bg md:mr-9 md:snap-start main">
-			<div className="container md:grid md:grid-cols-12 md:gap-4 md:h-3/4 md:w-2/3">
+		<div className="h-fit lg:h-screen flex flex-col justify-center items-center mx-10 lg:mx-16 lg:items-end lg:bg-bg lg:mr-9 lg:snap-start main">
+			<div className="container lg:grid lg:grid-cols-12 lg:gap-4 lg:h-3/4 lg:w-2/3 grid grid-cols-1 gap-6 w-2/3">
 				{gridItems.map((item, index) => (
 					<GridSquare
 						key={`${index}-${item.type}`} // Construct a unique key for each item
@@ -104,6 +105,7 @@ export default function Main() {
 					/>
 				))}
 			</div>
+			<FloatingArrow />
 		</div>
 	);
 }

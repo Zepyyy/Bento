@@ -12,11 +12,9 @@ export default function Nav({ activeLink }: navProps) {
 		{ href: "#experiences", name: "Experiences" },
 	];
 
-	// TODO: use dark: class from tailwind
-
 	return (
 		<nav>
-			<div className="md:flex md:flex-col hidden">
+			<div className="lg:flex lg:flex-col hidden">
 				{links.map((link) => (
 					<div
 						key={link.name}

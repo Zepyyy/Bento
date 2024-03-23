@@ -45,6 +45,16 @@ const config: Config = {
                 "Color-900": "var(--Color-900)",
                 "Color-950": "var(--Color-950)",
             },
+            keyframes: {
+                phantom: {
+                    "0%": { transform: "translateY(0)", opacity: "1" },
+                    "50%": { transform: "translateY(-8px)", opacity: "0.5" },
+                    "100%": { transform: "translateY(0)", opacity: "1" },
+                },
+            },
+            animation: {
+                phantom: "phantom 2s infinite",
+            },
         },
     },
     plugins: [],
