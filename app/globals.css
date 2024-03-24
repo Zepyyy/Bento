@@ -58,7 +58,62 @@
     --Color-900: #594969;
     --Color-950: #3a2f46;
 }
+[data-theme="CoastalCalm"] {
+    --Color-50: #f8fafb; /* Seashell white */
+    --Color-100: #dbe9ea; /* Light sea foam */
+    --Color-200: #bfd3d4; /* Soft aqua */
+    --Color-300: #a2bcbc; /* Muted turquoise */
+    --Color-400: #86a5a6; /* Ocean blue-gray */
+    --Color-500: #698e8f; /* Weathered teal */
+    --Color-600: #507374; /* Deep sea green */
+    --Color-700: #395759; /* Seaweed green */
+    --Color-800: #233c3e; /* Dark marine */
+    --Color-900: #0f2223; /* Abyssal blue */
+    --Color-950: #061111; /* Deep ocean floor */
+}
+[data-theme="RusticCanvas"] {
+    --Color-50: #faf8f4; /* Canvas white */
+    --Color-100: #f0e0d6; /* Light linen */
+    --Color-200: #e6c8b8; /* Warm taupe */
+    --Color-300: #dbb09a; /* Clay pink */
+    --Color-400: #cf987c; /* Terracotta */
+    --Color-500: #c3805e; /* Burnt sienna */
+    --Color-600: #a7684e; /* Rustic red */
+    --Color-700: #8b503e; /* Mahogany */
+    --Color-800: #6f392e; /* Dark oak */
+    --Color-900: #52221e; /* Deep umber */
+    --Color-950: #36160f; /* Walnut black */
+}
+[data-theme="SereneOasis"] {
+    --Color-50: #ecf8f7; /* Pale aqua */
+    --Color-100: #cfece9; /* Light mint */
+    --Color-200: #b2e0dc; /* Soft teal */
+    --Color-300: #95d4cf; /* Calm green-blue */
+    --Color-400: #78c8c2; /* Oasis blue */
+    --Color-500: #5bbcb5; /* Seafoam green */
+    --Color-600: #429f94; /* Deep turquoise */
+    --Color-700: #2a8273; /* Forest pool */
+    --Color-800: #126652; /* Lagoon green */
+    --Color-900: #004a31; /* Dark jungle */
+    --Color-950: #002618; /* Almost black */
+}
 
+[data-theme="UrbanTwilight"] {
+    --Color-50: #f4f4f6; /* Moon glow */
+    --Color-100: #e3e3e8; /* Twilight haze */
+    --Color-200: #d2d2da; /* Evening mist */
+    --Color-300: #c1c1cc; /* Dusk blue */
+    --Color-400: #b0b0be; /* Night sky */
+    --Color-500: #9f9fb0; /* Twilight purple */
+    --Color-600: #8e8ea2; /* Dark dusk */
+    --Color-700: #7d7d94; /* Midnight blue */
+    --Color-800: #6c6c86; /* Deep twilight */
+    --Color-900: #5b5b78; /* Urban indigo */
+    --Color-950: #4a4a5a; /* Almost black */
+    --Accent-1: #e7e0da; /* Faded brick */
+    --Accent-2: #d1c2b5; /* Old copper */
+    --Accent-3: #bb9d8f; /* Vintage bronze */
+}
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #1d1b1b;
@@ -115,6 +170,62 @@
         --Color-800: #6c5780;
         --Color-900: #594969;
         --Color-950: #3a2f46;
+    }
+    [data-theme="CoastalCalm"] {
+        --Color-50: #f8fafb; /* Seashell white */
+        --Color-100: #dbe9ea; /* Light sea foam */
+        --Color-200: #bfd3d4; /* Soft aqua */
+        --Color-300: #a2bcbc; /* Muted turquoise */
+        --Color-400: #86a5a6; /* Ocean blue-gray */
+        --Color-500: #698e8f; /* Weathered teal */
+        --Color-600: #507374; /* Deep sea green */
+        --Color-700: #395759; /* Seaweed green */
+        --Color-800: #233c3e; /* Dark marine */
+        --Color-900: #0f2223; /* Abyssal blue */
+        --Color-950: #061111; /* Deep ocean floor */
+    }
+    [data-theme="RusticCanvas"] {
+        --Color-50: #faf8f4; /* Canvas white */
+        --Color-100: #f0e0d6; /* Light linen */
+        --Color-200: #e6c8b8; /* Warm taupe */
+        --Color-300: #dbb09a; /* Clay pink */
+        --Color-400: #cf987c; /* Terracotta */
+        --Color-500: #c3805e; /* Burnt sienna */
+        --Color-600: #a7684e; /* Rustic red */
+        --Color-700: #8b503e; /* Mahogany */
+        --Color-800: #6f392e; /* Dark oak */
+        --Color-900: #52221e; /* Deep umber */
+        --Color-950: #36160f; /* Walnut black */
+    }
+    [data-theme="SereneOasis"] {
+        --Color-50: #ecf8f7; /* Pale aqua */
+        --Color-100: #cfece9; /* Light mint */
+        --Color-200: #b2e0dc; /* Soft teal */
+        --Color-300: #95d4cf; /* Calm green-blue */
+        --Color-400: #78c8c2; /* Oasis blue */
+        --Color-500: #5bbcb5; /* Seafoam green */
+        --Color-600: #429f94; /* Deep turquoise */
+        --Color-700: #2a8273; /* Forest pool */
+        --Color-800: #126652; /* Lagoon green */
+        --Color-900: #004a31; /* Dark jungle */
+        --Color-950: #002618; /* Almost black */
+    }
+
+    [data-theme="UrbanTwilight"] {
+        --Color-50: #f4f4f6; /* Moon glow */
+        --Color-100: #e3e3e8; /* Twilight haze */
+        --Color-200: #d2d2da; /* Evening mist */
+        --Color-300: #c1c1cc; /* Dusk blue */
+        --Color-400: #b0b0be; /* Night sky */
+        --Color-500: #9f9fb0; /* Twilight purple */
+        --Color-600: #8e8ea2; /* Dark dusk */
+        --Color-700: #7d7d94; /* Midnight blue */
+        --Color-800: #6c6c86; /* Deep twilight */
+        --Color-900: #5b5b78; /* Urban indigo */
+        --Color-950: #4a4a5a; /* Almost black */
+        --Accent-1: #e7e0da; /* Faded brick */
+        --Accent-2: #d1c2b5; /* Old copper */
+        --Accent-3: #bb9d8f; /* Vintage bronze */
     }
 }
 
