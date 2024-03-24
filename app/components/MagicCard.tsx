@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ColorThemeContext } from "@/app/contexts/ColorThemeContext";
 import { FaMagic } from "react-icons/fa";
 
@@ -15,17 +15,6 @@ export default function MagicCard() {
 		"SereneOasis",
 		"UrbanTwilight",
 	];
-
-	// switch to a color theme after a random time interval between 1 and 2 seconds
-	useEffect(() => {
-		const interval = setInterval(
-			() => {
-				handleMagicClick();
-			},
-			Math.floor(Math.random() * 1000) + 1000,
-		);
-		return () => clearInterval(interval);
-	}, []);
 
 	// function to handle the magic click
 	function handleMagicClick() {
