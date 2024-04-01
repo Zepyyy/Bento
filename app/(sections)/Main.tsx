@@ -95,8 +95,6 @@ const gridItems = [
 		rowStart: [7, 5],
 		backgroundColor: "bg-Color-200 dark:bg-Color-950",
 		textColor: "text-Color-950 dark:text-Color-100",
-		title: "789",
-		text: "text",
 	},
 ];
 
