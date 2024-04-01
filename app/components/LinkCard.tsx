@@ -8,7 +8,7 @@ export default function LinkCard() {
 				English:
 					"https://cyesteemulteeflk.public.blob.vercel-storage.com/Resumes/Stubecki_Quentin_Resume-J4u2W4rMQEawDBsxR6NSWysQXQtSSK.pdf",
 				French:
-					"https://cyesteemulteeflk.public.blob.vercel-storage.com/Resumes/Stubecki_Quentin_CV-6dPHTt9c7CBcLCLOvDooNxqOSc8OSE.pdf",
+					"https://cyesteemulteeflk.public.blob.vercel-storage.com/Resumes/Stubecki_Quentin_CV-BGIs8pLgfG8hyy08mkqP6C941lpIsd.pdf",
 			};
 
 			const response = await fetch(resumes[lang]);
