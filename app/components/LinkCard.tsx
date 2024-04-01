@@ -6,7 +6,7 @@ export default function LinkCard() {
 		try {
 			const resumes = {
 				English:
-					"https://cyesteemulteeflk.public.blob.vercel-storage.com/Resumes/Stubecki_Quentin_Resume-J4u2W4rMQEawDBsxR6NSWysQXQtSSK.pdf",
+					"https://cyesteemulteeflk.public.blob.vercel-storage.com/Resumes/Stubecki_Quentin_Resume-gTJro52pBIyc6lM9ImtpKFxffxyAOY.pdf",
 				French:
 					"https://cyesteemulteeflk.public.blob.vercel-storage.com/Resumes/Stubecki_Quentin_CV-BGIs8pLgfG8hyy08mkqP6C941lpIsd.pdf",
 			};
