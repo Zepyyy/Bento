@@ -7,6 +7,7 @@ import Nav from "@/app/components/Nav";
 import { useEffect, useRef, useState } from "react";
 import { ColorThemeProvider } from "@/app/contexts/ColorThemeContext";
 import FloatingArrow from "./components/FloatingArrow";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 export default function Home() {
 	const [activeLink, setActiveLink] = useState("home");
@@ -56,21 +57,25 @@ export default function Home() {
 
 	return (
 		<ColorThemeProvider>
-			<div className={"fixed top-1/2 -translate-y-1/2 w-1/12"}>
-				<Nav activeLink={activeLink} />
-			</div>
-			<div
-				className={
-					"bg-bg block lg:overflow-y-scroll lg:snap-y lg:snap-mandatory lg:h-screen"
-				}
-				ref={sectionRef}
-			>
-				<Main />
-				<Projects />
-				<Skills />
-				<Experiences />
-			</div>
-			<FloatingArrow section={activeLink} />
+			<ThemeProvider>
+				<div>
+					<div className={"fixed top-1/2 -translate-y-1/2 w-1/12"}>
+						<Nav activeLink={activeLink} />
+					</div>
+					<div
+						className={
+							"bg-bg block lg:overflow-y-scroll lg:snap-y lg:snap-mandatory lg:h-screen"
+						}
+						ref={sectionRef}
+					>
+						<Main />
+						<Projects />
+						<Skills />
+						<Experiences />
+					</div>
+					<FloatingArrow section={activeLink} />
+				</div>
+			</ThemeProvider>
 		</ColorThemeProvider>
 	);
 }

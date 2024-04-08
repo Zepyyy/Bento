@@ -1,6 +1,7 @@
 "use client";
 
 import GridSquare from "@/app/components/GridSquare";
+import { useState } from "react";
 
 const gridItems = [
 	{
@@ -9,7 +10,7 @@ const gridItems = [
 		rowSpan: 4,
 		colStart: [1, 1],
 		rowStart: [1, 1],
-		backgroundColor: "dark:bg-Color-100 bg-Color-950",
+		backgroundColor: "dark:bg-Color-200 bg-Color-950",
 		textColor: "dark:text-Color-950 text-Color-100",
 	},
 	{
@@ -84,8 +85,10 @@ const gridItems = [
 		rowStart: 7,
 		backgroundColor: "bg-Color-700 dark:bg-Color-200",
 		textColor: "text-Color-100 dark:text-Color-950",
-		title: "456",
-		text: "text",
+		title: "CESI Engineering School",
+		text: "Strasbourg, France",
+		titleIcon: "cap",
+		textIcon: "pin",
 	},
 	{
 		type: "link",

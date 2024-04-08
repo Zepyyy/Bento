@@ -11,7 +11,6 @@ export default function MagicCard() {
 		"WaterLeaf",
 		"LavenderPurple",
 		"CoastalCalm",
-		"RusticCanvas",
 		"SereneOasis",
 		"UrbanTwilight",
 	];

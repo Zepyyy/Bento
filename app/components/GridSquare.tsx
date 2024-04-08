@@ -18,6 +18,8 @@ interface GridProps {
 	content?: Array<string>;
 	text?: string;
 	link?: string;
+	titleIcon?: string;
+	textIcon?: string;
 }
 
 export default function GridSquare({
@@ -33,6 +35,8 @@ export default function GridSquare({
 	content,
 	text,
 	link,
+	titleIcon,
+	textIcon,
 }: GridProps) {
 	function cardSwitch(type: string | undefined) {
 		switch (type) {
@@ -41,7 +45,14 @@ export default function GridSquare({
 			case "icon":
 				return <IconCard spec={spec} link={link} />;
 			case "text":
-				return <TextCard title={title} text={text} />;
+				return (
+					<TextCard
+						title={title}
+						text={text}
+						titleIcon={titleIcon}
+						textIcon={textIcon}
+					/>
+				);
 			case "list":
 				return <ListCard title={title} content={content} />;
 			case "magic":
@@ -59,13 +70,13 @@ export default function GridSquare({
 		"rounded-xl",
 		`${backgroundColor}`,
 		`${textColor}`,
-		type === "icon"
-			? "p-0"
-			: type === "magic"
-			  ? "p-0"
-			  : type === "link"
-				  ? "p-0"
-				  : "p-5",
+		type === "pitch"
+			? "p-5"
+			: type === "list"
+			  ? "p-5"
+			  : type === "text"
+				  ? "p-5"
+				  : "p-0",
 		"hover:shadow-md",
 		"hover:scale-[1.02]",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",
@@ -74,6 +85,7 @@ export default function GridSquare({
 		"duration-500",
 		"ease-in-out",
 		"lg:m-0",
+		"h-full",
 	];
 
 	const colClasses = Array.isArray(colSpan)
