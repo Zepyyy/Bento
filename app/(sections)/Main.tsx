@@ -1,7 +1,6 @@
 "use client";
 
 import GridSquare from "@/app/components/GridSquare";
-import { useState } from "react";
 
 const gridItems = [
 	{
@@ -65,8 +64,8 @@ const gridItems = [
 		rowStart: 3,
 		backgroundColor: "bg-Color-700 dark:bg-Color-300",
 		textColor: "text-Color-100 dark:text-Color-950",
-		title: "Skills",
-		content: ["React", "Python", "Music", "Coffee", "Teamwork", "Notion"],
+		titleIcon: "heart",
+		content: ["Music", "Technology", "Web development", "Coffee"],
 	},
 	{
 		type: "magic",

@@ -54,7 +54,7 @@ export default function GridSquare({
 					/>
 				);
 			case "list":
-				return <ListCard title={title} content={content} />;
+				return <ListCard content={content} titleIcon={titleIcon} />;
 			case "magic":
 				return <MagicCard />;
 			case "link":
