@@ -22,7 +22,7 @@ export default function MagicCard() {
 			newColorTheme = colors[Math.floor(Math.random() * colors.length)];
 		}
 		setColorTheme(newColorTheme);
-		document.documentElement.setAttribute("data-theme", newColorTheme);
+		document.documentElement.setAttribute("data-colorTheme", newColorTheme);
 	}
 
 	return (

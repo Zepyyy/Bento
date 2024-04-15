@@ -11,7 +11,7 @@ function switchIcon(icon: string | undefined) {
 	switch (icon) {
 		case "cap":
 			return (
-				<RiGraduationCapLine className="absolute top-0 right-0 lg:text-[56px] text-[36px]" />
+				<RiGraduationCapLine className="absolute top-0 right-0 lg:text-[46px] text-[26px]" />
 			);
 		case "pin":
 			return <LuMapPin className="lg:text-[36px] text-[16px]" />;

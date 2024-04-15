@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// Font files can be colocated inside of `pages`
+const myFont = localFont({ src: "./Inter.ttf" });
 
 export const metadata: Metadata = {
 	title: "Quentin Stubecki's Portfolio",
@@ -19,10 +20,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${inter.variable} font-sans`}>
-				{children}
-				<Analytics />
-				<SpeedInsights />
+			<body>
+				<main className={myFont.className}>
+					{children}
+					<Analytics />
+					<SpeedInsights />
+				</main>
 			</body>
 		</html>
 	);
