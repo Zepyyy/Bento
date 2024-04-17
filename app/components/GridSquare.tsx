@@ -45,8 +45,8 @@ export default function GridSquare({ ...props }: GridSquareProps) {
 		`${props.backgroundColor}`,
 		`${props.textColor}`,
 		props.type === "pitch" || props.type === "list" || props.type === "text"
-			? "lg:p-5"
-			: "lg:p-0",
+			? "p-5"
+			: "p-0",
 		"hover:shadow-md",
 		"hover:scale-[1.02]",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",

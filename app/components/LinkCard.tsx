@@ -38,7 +38,7 @@ export default function LinkCard() {
 	return (
 		<div
 			className={
-				"flex flex-col justify-center items-center h-full group/buttons text-md lg:text-xl text-pretty"
+				"flex flex-col justify-center items-center h-full group/buttons text-xs md:text-md lg:text-xl text-pretty"
 			}
 		>
 			{/* not hovered */}
@@ -47,8 +47,10 @@ export default function LinkCard() {
 					"flex justify-center items-center h-full w-full p-5 group-hover/buttons:hidden"
 				}
 			>
-				<FaLink className="lg:text-[56px] text-[36px] mr-4" />
-				<div className={"font-bold"}>Resume</div>
+				<FaLink className="lg:text-[56px] text-[36px] mr-1 md:mr-4" />
+				<div className={"font-bold text-xl md:text-2xl lg:text-3xl"}>
+					Resume
+				</div>
 			</div>
 
 			{/* hovered */}
@@ -72,7 +74,7 @@ export default function LinkCard() {
 							key={`button-${lang}`}
 							type="button"
 							className={
-								"dark:bg-Color-950 bg-Color-200 text-xs md:text-md lg:text-xl font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg m-2"
+								"dark:bg-Color-950 bg-Color-200 text-xs md:text-md lg:text-xl font-semibold px-2 py-1 lg:px-4 lg:py-2 rounded-md md:rounded-lg m-2"
 							}
 							onClick={() => handleClick(lang)}
 						>
