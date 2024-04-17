@@ -1,4 +1,5 @@
 import Link from "next/link";
+import clsx from "clsx";
 
 interface navProps {
 	activeLink: string;
@@ -31,9 +32,10 @@ export default function Nav({ activeLink }: navProps) {
 						</Link>
 						{/* Active link indicator */}
 						<div
-							className={`absolute left-0 top-1/2 -translate-y-1/2 h-1 ${
-								activeLink === link.name.toLowerCase() ? "w-6" : "w-3"
-							} bg-Color-300 transition-all duration-300`}
+							className={clsx(
+								"absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-Color-300 transition-all duration-300",
+								activeLink === link.name.toLowerCase() ? "w-6" : "w-3",
+							)}
 						/>
 					</div>
 				))}
