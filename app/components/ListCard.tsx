@@ -19,9 +19,7 @@ function switchIcon(spec: string | undefined) {
 export default function ListCard({ content, titleIcon }: ListSquareProps) {
 	return (
 		<div className={"flex flex-col text-3xl font-bold h-full w-full"}>
-			<div className="relative dark:text-Color-800 text-Color-100">
-				{switchIcon(titleIcon)}
-			</div>
+			<div className="relative">{switchIcon(titleIcon)}</div>
 			<ul
 				className={"flex flex-col justify-center text-2xl font-semibold h-full"}
 			>

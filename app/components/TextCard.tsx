@@ -28,16 +28,10 @@ export default function TextCard({
 }: TextCardProps) {
 	return (
 		<div className={"flex flex-col h-full w-full"}>
-			<div className="relative dark:text-Color-950 text-Color-100">
-				{titleIcon ? switchIcon(titleIcon) : ""}
-			</div>
+			<div className="relative">{titleIcon ? switchIcon(titleIcon) : ""}</div>
 			<div className="flex flex-col justify-center w-full h-full">
 				<div className={"text-3xl font-bold"}>{title}</div>
-				<div
-					className={
-						"flex items-center ml-8 text-Color-200 dark:text-Color-950"
-					}
-				>
+				<div className={"flex items-center ml-8"}>
 					{textIcon ? switchIcon(textIcon) : ""}
 					<div className={"text-2xl font-semibold ml-2"}> {text} </div>
 				</div>

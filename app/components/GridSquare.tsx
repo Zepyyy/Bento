@@ -4,6 +4,7 @@ import PitchCard from "@/app/components/PitchCard";
 import TextCard from "@/app/components/TextCard";
 import MagicCard from "@/app/components/MagicCard";
 import LinkCard from "@/app/components/LinkCard";
+import MailCard from "./MailCard";
 
 interface GridProps {
 	type?: string;
@@ -20,6 +21,7 @@ interface GridProps {
 	link?: string;
 	titleIcon?: string;
 	textIcon?: string;
+	mail?: string;
 }
 
 export default function GridSquare({
@@ -37,6 +39,7 @@ export default function GridSquare({
 	link,
 	titleIcon,
 	textIcon,
+	mail,
 }: GridProps) {
 	function cardSwitch(type: string | undefined) {
 		switch (type) {
@@ -59,6 +62,8 @@ export default function GridSquare({
 				return <MagicCard />;
 			case "link":
 				return <LinkCard />;
+			case "mail":
+				return <MailCard mail={mail} />;
 			default:
 				return <div> empty </div>;
 		}
