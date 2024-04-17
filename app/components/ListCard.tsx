@@ -18,15 +18,17 @@ function switchIcon(spec: string | undefined) {
 
 export default function ListCard({ content, titleIcon }: ListSquareProps) {
 	return (
-		<div className={"flex flex-col text-3xl font-bold h-full w-full"}>
+		<div className={"flex flex-col font-bold h-full w-full"}>
 			<div className="relative">{switchIcon(titleIcon)}</div>
 			<ul
-				className={"flex flex-col justify-center text-2xl font-semibold h-full"}
+				className={
+					"flex flex-col justify-center text-md md:text-xl lg:text-2xl font-semibold h-full"
+				}
 			>
 				{content
 					? content.map((item, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-							<li key={index} className={"text-2xl my-2"}>
+							<li key={index} className={"my-2"}>
 								<div>{item}</div>
 							</li>
 					  ))

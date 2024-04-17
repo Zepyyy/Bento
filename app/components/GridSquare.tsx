@@ -19,8 +19,8 @@ interface GridProps {
 	content?: Array<string>;
 	text?: string;
 	link?: string;
-	titleIcon?: string;
-	textIcon?: string;
+	titleIcon: string;
+	textIcon: string;
 	mail?: string;
 }
 

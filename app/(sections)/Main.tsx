@@ -47,8 +47,8 @@ const gridItems = [
 	},
 	{
 		type: "mail",
-		colSpan: 6,
-		rowSpan: 2,
+		colSpan: [6, 3],
+		rowSpan: [2, 1],
 		colStart: 1,
 		rowStart: 5,
 		backgroundColor: "bg-Color-500 dark:bg-Color-400",
@@ -109,6 +109,8 @@ export default function Main() {
 				{gridItems.map((item, index) => (
 					<GridSquare
 						key={`${index}-${item.type}`} // Construct a unique key for each item
+						titleIcon=""
+						textIcon=""
 						{...item}
 					/>
 				))}

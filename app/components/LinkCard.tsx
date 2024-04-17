@@ -37,39 +37,48 @@ export default function LinkCard() {
 	return (
 		<div
 			className={
-				"flex flex-col justify-center items-center h-full group/buttons"
+				"flex flex-col justify-center items-center h-full group/buttons text-md lg:text-xl text-pretty"
 			}
 		>
+			{/* not hovered */}
 			<div
 				className={
-					"flex h-full w-full justify-center items-center p-5 group-hover/buttons:hidden"
+					"flex justify-center items-center h-full w-full p-5 group-hover/buttons:hidden"
 				}
 			>
 				<FaLink className="lg:text-[56px] text-[36px] mr-4" />
-				<div className={"text-3xl font-bold"}>Resume</div>
+				<div className={"font-bold"}>Resume</div>
 			</div>
-			<div className={"hidden group-hover/buttons:flex flex-col"}>
+
+			{/* hovered */}
+			<div
+				className={
+					"hidden justify-center items-center h-full w-full group-hover/buttons:flex flex-col p-5 md:p-0"
+				}
+			>
 				<div
 					className={
-						"flex text-2xl font-bold justify-center items-center w-full"
+						"flex flex-col text-center justify-center text-pretty font-bold w-full text-xs md:text-md lg:text-xl"
 					}
 				>
 					Download my resume in:
 				</div>
 				<div className={"flex flex-row justify-center items-center"}>
+					{/* English */}
 					<button
 						type="button"
 						className={
-							"dark:bg-Color-950 bg-Color-200 text-xl font-bold px-4 py-2 rounded-lg m-2"
+							"dark:bg-Color-950 bg-Color-200 text-xs md:text-md lg:text-xl font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg m-2"
 						}
 						onClick={() => handleClick("English")}
 					>
 						English
 					</button>
+					{/* French */}
 					<button
 						type="button"
 						className={
-							"dark:bg-Color-950 bg-Color-200 text-xl font-bold px-4 py-2 rounded-lg m-2"
+							"dark:bg-Color-950 bg-Color-200 text-xs md:text-md lg:text-xl font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg m-2"
 						}
 						onClick={() => handleClick("French")}
 					>

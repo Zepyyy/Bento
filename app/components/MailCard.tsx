@@ -8,7 +8,7 @@ export default function MailCard({ mail }: MailCardProps) {
 			<a
 				href="mailto:quentin.stubecki@viacesi.fr"
 				className={
-					"flex justify-center items-center text-3xl font-bold h-full w-full p-8 underline hover:no-underline"
+					"flex justify-center items-center font-bold h-full w-full text-sm sm:text-md md:text-xl lg:text-2xl lg:p-8 p-6 underline hover:no-underline"
 				}
 			>
 				{mail}
