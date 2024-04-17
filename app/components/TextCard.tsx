@@ -8,7 +8,7 @@ interface TextCardProps {
 	textIcon: string;
 }
 
-function SwitchIcon({ icon }: { icon: string }) {
+function Icon({ icon }: { icon: string }) {
 	switch (icon as string) {
 		case "cap":
 			return (
@@ -21,26 +21,21 @@ function SwitchIcon({ icon }: { icon: string }) {
 	}
 }
 
-export default function TextCard({
-	title,
-	text,
-	titleIcon,
-	textIcon,
-}: TextCardProps) {
+export default function TextCard({ ...props }: TextCardProps) {
 	return (
 		<div className={"flex flex-col h-full w-full"}>
 			<div className="relative">
-				<SwitchIcon icon={titleIcon} />
+				<Icon icon={props.titleIcon} />
 			</div>
 			<div className="flex flex-col justify-center w-full h-full">
 				<div className={"text-md md:text-xl lg:text-2xl font-bold"}>
-					{title}
+					{props.title}
 				</div>
 				<div
 					className={"flex md:items-center md:ml-8 font-semibold opacity-75"}
 				>
-					<SwitchIcon icon={textIcon} />
-					<div className={"text-md md:text-xl lg:text-2xl"}>{text}</div>
+					<Icon icon={props.textIcon} />
+					<div className={"text-md md:text-xl lg:text-2xl"}>{props.text}</div>
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,7 @@ import { FaLink } from "react-icons/fa6";
 import React from "react";
 
 export default function LinkCard() {
+	const langages = ["English", "French"] as const;
 	const handleClick = async (lang: "English" | "French") => {
 		try {
 			const resumes = {
@@ -63,27 +64,21 @@ export default function LinkCard() {
 				>
 					Download my resume in:
 				</div>
+
+				{/* languages */}
 				<div className={"flex flex-row justify-center items-center"}>
-					{/* English */}
-					<button
-						type="button"
-						className={
-							"dark:bg-Color-950 bg-Color-200 text-xs md:text-md lg:text-xl font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg m-2"
-						}
-						onClick={() => handleClick("English")}
-					>
-						English
-					</button>
-					{/* French */}
-					<button
-						type="button"
-						className={
-							"dark:bg-Color-950 bg-Color-200 text-xs md:text-md lg:text-xl font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg m-2"
-						}
-						onClick={() => handleClick("French")}
-					>
-						French
-					</button>
+					{langages.map((lang: "English" | "French") => (
+						<button
+							key={`button-${lang}`}
+							type="button"
+							className={
+								"dark:bg-Color-950 bg-Color-200 text-xs md:text-md lg:text-xl font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg m-2"
+							}
+							onClick={() => handleClick(lang)}
+						>
+							{lang}
+						</button>
+					))}
 				</div>
 			</div>
 		</div>

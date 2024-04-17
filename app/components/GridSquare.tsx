@@ -5,65 +5,34 @@ import TextCard from "@/app/components/TextCard";
 import MagicCard from "@/app/components/MagicCard";
 import LinkCard from "@/app/components/LinkCard";
 import MailCard from "./MailCard";
+import { clsx } from "clsx";
 
-interface GridProps {
-	type?: string;
-	colSpan: number | Array<number>;
-	rowSpan: number | Array<number>;
-	colStart?: number | Array<number>;
-	rowStart?: number | Array<number>;
-	backgroundColor: string;
-	textColor?: string;
-	spec?: string;
-	title?: string;
-	content?: Array<string>;
-	text?: string;
-	link?: string;
-	titleIcon: string;
-	textIcon: string;
-	mail?: string;
-}
+import type { GridSquareProps } from "@/app/types/GridSquare";
 
-export default function GridSquare({
-	type,
-	colSpan,
-	rowSpan,
-	colStart,
-	rowStart,
-	backgroundColor,
-	textColor,
-	spec,
-	title,
-	content,
-	text,
-	link,
-	titleIcon,
-	textIcon,
-	mail,
-}: GridProps) {
-	function cardSwitch(type: string | undefined) {
+export default function GridSquare({ ...props }: GridSquareProps) {
+	function CardSwitch({ type }: { type: string }) {
 		switch (type) {
 			case "pitch":
 				return <PitchCard />;
 			case "icon":
-				return <IconCard spec={spec} link={link} />;
+				return <IconCard spec={props.spec} link={props.link} />;
 			case "text":
 				return (
 					<TextCard
-						title={title}
-						text={text}
-						titleIcon={titleIcon}
-						textIcon={textIcon}
+						title={props.title}
+						text={props.text}
+						titleIcon={props.titleIcon}
+						textIcon={props.textIcon}
 					/>
 				);
 			case "list":
-				return <ListCard content={content} titleIcon={titleIcon} />;
+				return <ListCard content={props.content} titleIcon={props.titleIcon} />;
 			case "magic":
 				return <MagicCard />;
 			case "link":
 				return <LinkCard />;
 			case "mail":
-				return <MailCard mail={mail} />;
+				return <MailCard mail={props.mail} />;
 			default:
 				return <div> empty </div>;
 		}
@@ -73,15 +42,11 @@ export default function GridSquare({
 	const baseClasses = [
 		"lg:rounded-2xl",
 		"rounded-xl",
-		`${backgroundColor}`,
-		`${textColor}`,
-		type === "pitch"
-			? "p-5"
-			: type === "list"
-			  ? "p-5"
-			  : type === "text"
-				  ? "p-5"
-				  : "p-0",
+		`${props.backgroundColor}`,
+		`${props.textColor}`,
+		props.type === "pitch" || props.type === "list" || props.type === "text"
+			? "lg:p-5"
+			: "lg:p-0",
 		"hover:shadow-md",
 		"hover:scale-[1.02]",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",
@@ -93,26 +58,33 @@ export default function GridSquare({
 		"h-full",
 	];
 
-	const colClasses = Array.isArray(colSpan)
-		? `lg:col-span-${colSpan[0]} col-span-${colSpan[1]}`
-		: `lg:col-span-${colSpan} col-span-3`;
+	const colClasses = Array.isArray(props.colSpan)
+		? `lg:col-span-${props.colSpan[0]} col-span-${props.colSpan[1]}`
+		: `lg:col-span-${props.colSpan} col-span-3`;
 
-	const rowClasses = Array.isArray(rowSpan)
-		? `lg:row-span-${rowSpan[0]} row-span-${rowSpan[1]}`
-		: `lg:row-span-${rowSpan} row-span-1`;
+	const rowClasses = Array.isArray(props.rowSpan)
+		? `lg:row-span-${props.rowSpan[0]} row-span-${props.rowSpan[1]}`
+		: `lg:row-span-${props.rowSpan} row-span-1`;
 
-	const rowStartClasses = Array.isArray(rowStart)
-		? `lg:row-start-${rowStart[0]} row-start-${rowStart[1]}`
-		: `lg:row-start-${rowStart}`;
+	const rowStartClasses = Array.isArray(props.rowStart)
+		? `lg:row-start-${props.rowStart[0]} row-start-${props.rowStart[1]}`
+		: `lg:row-start-${props.rowStart}`;
 
-	const colStartClasses = Array.isArray(colStart)
-		? `lg:col-start-${colStart[0]} col-start-${colStart[1]}`
-		: `lg:col-start-${colStart}`;
+	const colStartClasses = Array.isArray(props.colStart)
+		? `lg:col-start-${props.colStart[0]} col-start-${props.colStart[1]}`
+		: `lg:col-start-${props.colStart}`;
 
-	const gridClasses = `${colClasses} ${rowClasses} ${colStartClasses} ${rowStartClasses}`;
-
-	// Join all classes together
-	const className = [...baseClasses, gridClasses].join(" ");
-
-	return <div className={className}>{cardSwitch(type)}</div>;
+	return (
+		<div
+			className={clsx(
+				baseClasses,
+				colClasses,
+				rowClasses,
+				colStartClasses,
+				rowStartClasses,
+			)}
+		>
+			<CardSwitch type={props.type} />
+		</div>
+	);
 }

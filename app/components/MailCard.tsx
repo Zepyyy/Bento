@@ -1,5 +1,5 @@
 interface MailCardProps {
-	mail?: string;
+	mail: string;
 }
 
 export default function MailCard({ mail }: MailCardProps) {

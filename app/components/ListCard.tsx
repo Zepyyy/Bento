@@ -2,10 +2,10 @@ import { FaRegHeart } from "react-icons/fa";
 
 interface ListSquareProps {
 	content?: Array<string>;
-	titleIcon?: string;
+	titleIcon: string;
 }
 
-function switchIcon(spec: string | undefined) {
+function Icon({ spec }: { spec: string }) {
 	switch (spec) {
 		case "heart":
 			return (
@@ -19,7 +19,9 @@ function switchIcon(spec: string | undefined) {
 export default function ListCard({ content, titleIcon }: ListSquareProps) {
 	return (
 		<div className={"flex flex-col font-bold h-full w-full"}>
-			<div className="relative">{switchIcon(titleIcon)}</div>
+			<div className="relative">
+				<Icon spec={titleIcon} />
+			</div>
 			<ul
 				className={
 					"flex flex-col justify-center text-md md:text-xl lg:text-2xl font-semibold h-full"
