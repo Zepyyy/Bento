@@ -5,20 +5,20 @@ import GridSquare from "@/app/components/GridSquare";
 const gridItems = [
 	{
 		type: "pitch",
-		colSpan: 6,
-		rowSpan: 4,
-		colStart: [1, 1],
-		rowStart: [1, 1],
+		colSpan: 6, // 6 columns wide on large screens, responsive defaults to 3
+		rowSpan: 4, // 4 rows tallon large screens, responsive defaults to 3
+		colStart: [1, 1], // Start at column 1, responsive at 1
+		rowStart: [1, 1], // Start at row 1, responsive at 1
 		backgroundColor: "dark:bg-Color-200 bg-Color-950",
 		textColor: "dark:text-Color-950 text-Color-100",
 	},
 	{
 		type: "icon",
 		spec: "github",
-		colSpan: [2, 1],
-		rowSpan: 2,
-		colStart: [9, 1],
-		rowStart: [1, 2],
+		colSpan: [2, 1], // 2 columns wide on large screens, responsive at 1
+		rowSpan: 2, // 2 rows tall on large screens, responsive defaults to 1
+		colStart: [9, 1], // Start at column 9, responsive at 1
+		rowStart: [1, 2], // Start at row 1, responsive at 2
 		backgroundColor: "dark:bg-Color-200 bg-Color-950",
 		textColor: "dark:text-Color-950 text-Color-200",
 		link: "https://github.com/Zepyyy",
@@ -47,7 +47,7 @@ const gridItems = [
 	},
 	{
 		type: "mail",
-		colSpan: [6, 3],
+		colSpan: 6,
 		rowSpan: [2, 1],
 		colStart: 1,
 		rowStart: 5,
@@ -57,7 +57,7 @@ const gridItems = [
 	},
 	{
 		type: "list",
-		colSpan: [6, 3],
+		colSpan: 6,
 		rowSpan: 4,
 		colStart: 7,
 		rowStart: 3,
@@ -77,7 +77,7 @@ const gridItems = [
 	},
 	{
 		type: "text",
-		colSpan: [6, 3],
+		colSpan: 6,
 		rowSpan: 2,
 		colStart: 3,
 		rowStart: 7,
@@ -105,7 +105,7 @@ export default function Main() {
 			className="h-fit lg:h-screen flex flex-col justify-center items-center mx-10 lg:mx-16 lg:items-end lg:bg-bg lg:mr-9 lg:snap-start main"
 			id="home"
 		>
-			<div className="lg:grid lg:grid-cols-12 lg:gap-4 lg:h-3/4 lg:w-2/3 grid grid-cols-3 gap-4 w-3/4">
+			<div className="lg:grid lg:grid-cols-12 lg:gap-4 lg:h-3/4 lg:w-2/3 grid grid-cols-3 gap-4 w-3/4 m-10">
 				{gridItems.map((item, index) => (
 					<GridSquare
 						key={`${index}-${item.type}`} // Construct a unique key for each item
