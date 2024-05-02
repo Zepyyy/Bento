@@ -51,9 +51,19 @@ const config: Config = {
                     "50%": { transform: "translateY(-8px)", opacity: "0.5" },
                     "100%": { transform: "translateY(0)", opacity: "1" },
                 },
+                tingle: {
+                    "0%, 100%": { transform: "scale(1)" },
+                    "50%": { transform: "scale(1.05)" },
+                },
+                scroll: {
+                    "0%, 100%": { transform: "translateX(0)" },
+                    "50%": { transform: "translateX(-100%)" },
+                },
             },
             animation: {
                 phantom: "phantom 2s infinite",
+                tingle: "tingle 3s infinite ease-in-out",
+                scroll: "scroll linear 5s infinite",
             },
         },
     },

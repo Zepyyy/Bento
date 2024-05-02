@@ -48,11 +48,10 @@ export default function GridSquare({ ...props }: GridSquareProps) {
 			? "p-5"
 			: "p-0",
 		"hover:shadow-md",
-		"hover:scale-[1.02]",
+		"hover:animate-tingle",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",
 		"hover:text-Color-900 dark:hover:text-Color-100",
 		"transition",
-		"duration-500",
 		"ease-in-out",
 		"lg:m-0",
 		"h-full",

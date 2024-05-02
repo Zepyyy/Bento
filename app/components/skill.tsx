@@ -1,19 +1,21 @@
 import clsx from "clsx";
 
 export default function Skill({
-	width,
-	height,
-}: { width: number; height: number }) {
+	name,
+	category,
+	delay,
+}: {
+	name: string;
+	category: string;
+	delay: number;
+}) {
+	const classes = clsx(
+		"snap-start bg-Color-300 z-20 w-full h-full rounded-2xl text-center flex justify-center items-center cursor-pointer transition duration-300 hover:animate-tingle",
+	);
 	return (
-		<div
-			className={clsx(
-				"col-span-1 bg-blue-500 z-10",
-				`w-${width}`,
-				`h-${height}`,
-			)}
-		>
-			<div className="bg-blue-300 z-20 w-full h-full">
-				{width}*{height}
+		<div className="size-64 animate-scroll">
+			<div className={classes} style={{ animationDelay: `${delay}ms` }}>
+				{name}
 			</div>
 		</div>
 	);
