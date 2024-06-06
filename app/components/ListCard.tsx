@@ -6,14 +6,11 @@ interface ListSquareProps {
 }
 
 function Icon({ spec }: { spec: string }) {
-	switch (spec) {
-		case "heart":
-			return (
-				<FaRegHeart className="absolute top-0 right-0 lg:text-[52px] text-[32px]" />
-			);
-		default:
-			return <div> empty </div>;
-	}
+	return spec === "heart" ? (
+		<FaRegHeart className="lg:text-[56px] text-[36px]" />
+	) : (
+		<div> empty </div>
+	);
 }
 
 export default function ListCard({ content, titleIcon }: ListSquareProps) {
@@ -28,9 +25,8 @@ export default function ListCard({ content, titleIcon }: ListSquareProps) {
 				}
 			>
 				{content
-					? content.map((item, index) => (
-							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-							<li key={index} className={"my-2"}>
+					? content.map((item) => (
+							<li key={item} className={"my-2"}>
 								<div>{item}</div>
 							</li>
 					  ))

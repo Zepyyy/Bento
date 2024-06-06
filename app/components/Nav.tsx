@@ -1,11 +1,11 @@
 import Link from "next/link";
 import clsx from "clsx";
 
-interface navProps {
+interface NavProps {
 	activeLink: string;
 }
 
-export default function Nav({ activeLink }: navProps) {
+export default function Nav({ activeLink }: NavProps) {
 	const links = [
 		{ href: "#home", name: "Home" },
 		{ href: "#projects", name: "Projects" },

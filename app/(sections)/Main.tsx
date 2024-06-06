@@ -1,7 +1,6 @@
 "use client";
 
 import GridSquare from "@/app/components/GridSquare";
-// import gridItems from "@/app/data/gridItems.json";
 const gridItems = [
 	{
 		type: "pitch",

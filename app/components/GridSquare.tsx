@@ -9,36 +9,34 @@ import { clsx } from "clsx";
 
 import type { GridSquareProps } from "@/app/types/GridSquare";
 
-export default function GridSquare({ ...props }: GridSquareProps) {
-	function CardSwitch({ type }: { type: string }) {
-		switch (type) {
-			case "pitch":
-				return <PitchCard />;
-			case "icon":
-				return <IconCard spec={props.spec} link={props.link} />;
-			case "text":
-				return (
-					<TextCard
-						title={props.title}
-						text={props.text}
-						titleIcon={props.titleIcon}
-						textIcon={props.textIcon}
-					/>
-				);
-			case "list":
-				return <ListCard content={props.content} titleIcon={props.titleIcon} />;
-			case "magic":
-				return <MagicCard />;
-			case "link":
-				return <LinkCard />;
-			case "mail":
-				return <MailCard mail={props.mail} />;
-			default:
-				return <div> empty </div>;
-		}
+function CardSwitch({ props }: { props: GridSquareProps }) {
+	switch (props.type) {
+		case "pitch":
+			return <PitchCard />;
+		case "icon":
+			return <IconCard spec={props.spec} link={props.link} />;
+		case "text":
+			return (
+				<TextCard
+					title={props.title}
+					text={props.text}
+					titleIcon={props.titleIcon}
+					textIcon={props.textIcon}
+				/>
+			);
+		case "list":
+			return <ListCard content={props.content} titleIcon={props.titleIcon} />;
+		case "magic":
+			return <MagicCard />;
+		case "link":
+			return <LinkCard />;
+		case "mail":
+			return <MailCard mail={props.mail} />;
+		default:
+			return <div> empty </div>;
 	}
-	// Define base classes as an array
-
+}
+export default function GridSquare({ ...props }: GridSquareProps) {
 	const baseClasses = [
 		"lg:rounded-2xl",
 		"rounded-xl",
@@ -48,7 +46,7 @@ export default function GridSquare({ ...props }: GridSquareProps) {
 			? "p-5"
 			: "p-0",
 		"hover:shadow-md",
-		"hover:animate-tingle",
+		"hover:animate-zoom",
 		"hover:bg-Color-300 dark:hover:bg-Color-800",
 		"hover:text-Color-900 dark:hover:text-Color-100",
 		"transition",
@@ -83,7 +81,7 @@ export default function GridSquare({ ...props }: GridSquareProps) {
 				rowStartClasses,
 			)}
 		>
-			<CardSwitch type={props.type} />
+			<CardSwitch props={props} />
 		</div>
 	);
 }

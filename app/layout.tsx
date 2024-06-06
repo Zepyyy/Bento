@@ -4,8 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// Font files can be colocated inside of `pages`
-const myFont = localFont({ src: "./Inter.ttf" });
+const myFont = localFont({ src: "./fonts/Inter.ttf" });
 
 export const metadata: Metadata = {
 	title: "Quentin Stubecki's Portfolio",

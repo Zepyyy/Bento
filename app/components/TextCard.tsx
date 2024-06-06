@@ -9,7 +9,7 @@ interface TextCardProps {
 }
 
 function Icon({ icon }: { icon: string }) {
-	switch (icon as string) {
+	switch (icon) {
 		case "cap":
 			return (
 				<RiGraduationCapLine className="hidden md:flex absolute top-0 right-0 lg:text-[46px] text-[36px]" />

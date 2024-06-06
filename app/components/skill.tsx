@@ -1,22 +1,29 @@
 import clsx from "clsx";
 
-export default function Skill({
-	name,
-	category,
-	delay,
-}: {
-	name: string;
-	category: string;
-	delay: number;
-}) {
+function categoryColor(category: string) {
+	switch (category) {
+		case "Soft":
+			return "bg-Color-200";
+		case "Engineering":
+			return "bg-Color-300";
+		case "Software":
+			return "bg-Color-400";
+		case "Web":
+			return "bg-Color-500";
+		case "Database":
+			return "bg-Color-600";
+		default:
+			return "bg-Color-800";
+	}
+}
+export default function Skill(props: { name: string; category: string }) {
 	const classes = clsx(
-		"snap-start bg-Color-300 z-20 w-full h-full rounded-2xl text-center flex justify-center items-center cursor-pointer transition duration-300 hover:animate-tingle",
+		"w-56 h-56 z-20 rounded-2xl text-center flex justify-center items-center cursor-pointer m-3 select-none",
+		categoryColor(props.category),
 	);
 	return (
-		<div className="size-64 animate-scroll">
-			<div className={classes} style={{ animationDelay: `${delay}ms` }}>
-				{name}
-			</div>
+		<div className={classes}>
+			<div>{props.name}</div>
 		</div>
 	);
 }
